@@ -64,5 +64,5 @@ result { code: '200', level: { side: 'ask', price: 31, amount: 43 } }
 There is currently a race condition which tries to upgrade the remote peer beforehand, and this produces concurrency which is dropped by the service. The result of this are levels orders being dropped. The solution to this would be to update the local incoming first, then subsequently manage the timing of the remote update with async calls that can be awaited.
 
 ## TODOS
-The match_orderbook() is not implemented, which is now just moving the incoming orders to the orderbook directly without matching orders.
+The match_orderbook() is not implemented, which is now just moving the incoming orders to the orderbook directly without matching orders.\
 This example doesn't consider a symbol variant, it is made for only one symbol. Levels with symbol variants can be further implemented.
