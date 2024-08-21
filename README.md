@@ -66,3 +66,4 @@ There is currently a race condition which tries to upgrade the remote peer befor
 ## TODOS
 The match_orderbook() is not implemented, which is now just moving the incoming orders to the orderbook directly without matching orders.\
 This example doesn't consider a symbol variant, it is made for only one symbol. Levels with symbol variants can be further implemented.
+The functionality for pushing the updated states to the app_ring property of the orderbook can be further implemented.
